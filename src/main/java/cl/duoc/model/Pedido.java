@@ -11,7 +11,7 @@ public class Pedido {
     private String direccionEntrega;
     private EstadoPedido estadoPedido;
 
-    public Pedido(String direccionEntrega, int id, EstadoPedido estadoPedido) {
+    public Pedido( int id, String direccionEntrega, EstadoPedido estadoPedido) {
         this.direccionEntrega = direccionEntrega;
         this.id = id;
         this.estadoPedido = estadoPedido;
@@ -52,9 +52,9 @@ public class Pedido {
     @Override
     public String toString() {
         return
-                "ID: " + id + '\n' +
-                "Dirección de Entrega: " + direccionEntrega + '\n' +
-                "Estado del Pedido: " + estadoPedido;
+                " \n #" + id + '\n' +
+                " Dirección de Entrega: " + direccionEntrega + '\n' +
+                " Estado del Pedido: " + estadoPedido;
     }
 }
 

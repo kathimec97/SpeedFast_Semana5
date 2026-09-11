@@ -18,7 +18,7 @@ public class ZonaDeCarga {
      */
     public synchronized void agregarPedido(Pedido p) {
         pedidosPendientes.add(p);
-        System.out.println("Agregando pedido a zona de Carga:  " + p);
+        System.out.println("...........Nuevo Pedido Pendiente.........." + p);
     }
 
     /**
@@ -32,9 +32,10 @@ public class ZonaDeCarga {
         Pedido pedidoRetirado = pedidosPendientes.remove(0);
         return pedidoRetirado;
         }else {
-            System.out.println("No hay Pedidos Pendientes");
+            System.out.println("[Notificando a repartidor] " + Thread.currentThread().getName() + " No hay pedidos pendientes.");
+            return null;
         }
-        return null;
+
     }
 
 }
