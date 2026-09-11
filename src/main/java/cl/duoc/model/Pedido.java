@@ -2,6 +2,10 @@ package cl.duoc.model;
 
 import cl.duoc.EstadoPedido;
 
+/**
+ * Representa un pedido a despachar dentro del sistema SpeedFast.
+ * @author Katherine
+ */
 public class Pedido {
     private int id;
     private String direccionEntrega;
@@ -37,6 +41,10 @@ public class Pedido {
         this.estadoPedido = estadoPedido;
     }
 
+    /**
+     * Actualiza el estado del pedido a partir de una cadena de texto.
+     * @param nuevoEstado
+     */
     public void setEstadoPedido(String nuevoEstado) {
         this.estadoPedido = EstadoPedido.valueOf(nuevoEstado);
     }
